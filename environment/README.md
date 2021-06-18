@@ -3,7 +3,9 @@
 cd environment
 
 terraform init -backend-config backend/${ENV}.conf
+
 terraform plan -backend-config backend/${ENV}.tfvars
+
 terraform apply -backend-config backend/${ENV}.tfvars
 
 where ${ENV} can be:
@@ -17,16 +19,6 @@ No requirements.
 ## Providers
 
 No providers.
-
-## Modules
-
-| Name | Source | Version |
-|------|--------|---------|
-| <a name="module_app_asg"></a> [app\_asg](#module\_app\_asg) | ../modules/asg | n/a |
-| <a name="module_app_elb"></a> [app\_elb](#module\_app\_elb) | ../modules/elb | n/a |
-| <a name="module_db"></a> [db](#module\_db) | ../modules/db | n/a |
-| <a name="module_web_asg"></a> [web\_asg](#module\_web\_asg) | ../modules/asg | n/a |
-| <a name="module_web_elb"></a> [web\_elb](#module\_web\_elb) | ../modules/elb | n/a |
 
 ## Resources
 
